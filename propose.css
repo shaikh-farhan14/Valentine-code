@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family:'poppins';
+    background-color: #ffebf0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #d63384;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#yes-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+#no-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
