@@ -25,13 +25,28 @@ const noMessages = [
     "Okay, I'm taking the day off",
 ];
 
+// noBtn.addEventListener('click', () => {
+//     noCount++;
+     
+//     const messageIndex = Math.min(noCount, noMessages.length - 1);
+//     noBtn.innerText = noMessages[messageIndex];
+//     yesFontSize += 20; 
+    
+//     yesBtn.style.fontSize = `${yesFontSize}px`;
+//     yesBtn.style.padding = `${yesFontSize / 2}px ${yesFontSize}px`;
+// });
 noBtn.addEventListener('click', () => {
     noCount++;
-     
-    const messageIndex = Math.min(noCount, noMessages.length - 1);
-    noBtn.innerText = noMessages[messageIndex];
-    yesFontSize += 20; 
-    
+
+    if (noCount >= noMessages.length) {
+        noBtn.remove(); // removes the NO button
+    } else {
+        const messageIndex = noCount;
+        noBtn.innerText = noMessages[messageIndex];
+    }
+
+    yesFontSize += 20;
+
     yesBtn.style.fontSize = `${yesFontSize}px`;
     yesBtn.style.padding = `${yesFontSize / 2}px ${yesFontSize}px`;
 });
